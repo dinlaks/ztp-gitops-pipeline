@@ -1,0 +1,7 @@
+generators:
+- common-ranGen.yaml
+- group-5gcore-ranGen.yaml
+- site-sno02-ranGen.yaml
+
+resources:
+- ns.yaml
