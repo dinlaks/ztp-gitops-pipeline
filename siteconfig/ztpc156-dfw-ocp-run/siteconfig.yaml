@@ -67,20 +67,20 @@ spec:
                     prefix-length: 24
                 ipv6:
                   enabled: false
-              - name: ens5f0
-                type: ethernet
-                state: up
-                ipv4:
-                  enabled: false
-                ipv6:
-                  enabled: false
-              - name: ens5f1
-                type: ethernet
-                state: up
-                ipv4:
-                  enabled: false
-                ipv6:
-                  enabled: false
+#              - name: ens5f0
+#                type: ethernet
+#                state: up
+#                ipv4:
+#                  enabled: false
+#                ipv6:
+#                  enabled: false
+#              - name: ens5f1
+#                type: ethernet
+#                state: up
+#                ipv4:
+#                  enabled: false
+#                ipv6:
+#                  enabled: false
             dns-resolver:
               config:
                 search:

@@ -9,39 +9,39 @@ spec:
     sites: "ztpc156"
   mcp: "master"
   sourceFiles:
-    - fileName: SriovNetworkNodePolicy.yaml
-      policyName: "config-policy"
-      metadata:
-        name: "policy-mt27710-0-openshift"
-      spec:
-        deviceType: netdevice
-        isRdma: false
-        nicSelector:
-          pfNames: ["ens5f0#0-0"]
-        numVfs: 9
-        resourceName: mt27710_0_openshift
-    - fileName: SriovNetworkNodePolicy.yaml
-      policyName: "config-policy"
-      metadata:
-        name: "policy-mt27710-0-vfio-pci"
-      spec:
-        deviceType: vfio-pci
-        isRdma: false
-        nicSelector:
-          pfNames: ["ens5f0#1-4"]
-        numVfs: 9
-        resourceName: mt27710_0_vfio_pci
-    - fileName: SriovNetworkNodePolicy.yaml
-      policyName: "config-policy"
-      metadata:
-        name: "policy-mt27710-0-netdevice"
-      spec:
-        deviceType: netdevice
-        isRdma: false
-        nicSelector:
-          pfNames: ["ens5f0#5-8"]
-        numVfs: 9
-        resourceName: mt27710_0_netdevice
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-0-openshift"
+#      spec:
+#        deviceType: netdevice
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f0#0-0"]
+#        numVfs: 9
+#        resourceName: mt27710_0_openshift
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-0-vfio-pci"
+#      spec:
+#        deviceType: vfio-pci
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f0#1-4"]
+#        numVfs: 9
+#        resourceName: mt27710_0_vfio_pci
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-0-netdevice"
+#      spec:
+#        deviceType: netdevice
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f0#5-8"]
+#        numVfs: 9
+#        resourceName: mt27710_0_netdevice
 #    - fileName: SriovNetworkNodePolicy.yaml
 #      policyName: "config-policy"
 #      metadata:
