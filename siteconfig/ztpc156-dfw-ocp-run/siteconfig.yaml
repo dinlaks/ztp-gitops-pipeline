@@ -14,8 +14,16 @@ spec:
   - clusterName: "ztpc156"
     networkType: "OVNKubernetes"
     clusterLabels:
+      # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples
+      du-profile: "v4.10"
+      # ../policygentemplates/common-ranGen.yaml will apply to all clusters with 'common: true'
       common: true
+      # ../policygentemplates/group-du-sno-ranGen.yaml will apply to all clusters with 'group-du-sno: ""'
+      group-du-sno: ""
+      # ../policygentemplates/group-5gcore-ranGen.yaml will apply to all clusters with '5g-core-profile: true'
       5gcore-profile: true
+      # ../policygentemplates/example-sno-site.yaml will apply to all clusters with 'sites: "example-sno"'
+      # Normally this should match or contain the cluster name so it only applies to a single cluster
       sites : "ztpc156"
     clusterNetwork:
       - cidr: "10.100.0.0/16"
