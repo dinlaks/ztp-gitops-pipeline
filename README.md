@@ -54,8 +54,9 @@ To check ceph osd tree list
 oc -n openshift-storage exec $(oc -n openshift-storage get pod  -l "app=rook-ceph-tools" -o jsonpath='{.items[0].metadata.name}') -- ceph osd tree
 ```
 
-3. Set Default Storage Class
-Post to ODF Storage(persistent volume) is created, set the default storage class to use for ZTP
+### Set Default Storage Class
+
+3. Post to ODF Storage(persistent volume) is created, set the default storage class to use for ZTP
 
 ```
 oc patch storageclass ocs-storagecluster-ceph-rbd -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
