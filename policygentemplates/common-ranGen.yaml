@@ -23,8 +23,6 @@ spec:
       policyName: "subscriptions-policy"
     - fileName: PtpSubscriptionOperGroup.yaml
       policyName: "subscriptions-policy"
-    - fileName: PtpOperatorStatus.yaml
-      policyName: "subscriptions-policy"
     - fileName: PaoSubscription.yaml
       policyName: "subscriptions-policy"
     - fileName: PaoSubscriptionNS.yaml
@@ -44,8 +42,6 @@ spec:
     - fileName: StorageOperGroup.yaml
       policyName: "subscriptions-policy"
     - fileName: StorageSubscription.yaml
-      policyName: "subscriptions-policy"
-    - fileName: StorageOperatorStatus.yaml
       policyName: "subscriptions-policy"
     - fileName: ReduceMonitoringFootprint.yaml
       policyName: "config-policy"
