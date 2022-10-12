@@ -8,7 +8,7 @@ spec:
   baseDomain: "dfw.ocp.run"
   pullSecretRef:
     name: "pull-secret"
-  clusterImageSetNameRef: "openshift-v4.11.4"
+  clusterImageSetNameRef: "img4.11.7-x86-64-appsub"
   sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJn0yUIqXBCIglm0UUA+qLF+Dlr5U9pneFLOFdt+f9XJ dlakshma@redhat.com"
   clusters:
   - clusterName: "ztpc156"
