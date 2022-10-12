@@ -19,7 +19,7 @@ This repo contains YAML manifests and instructions for various ZTP related demos
 7. Deploy TALM Operator
 
 
-### ODF Post Install Checks
+### ODF Pre-Install Checks
 
 1. To ensure ODF disks are clean if previous install was used by ceph
 Login to each node;
@@ -30,6 +30,8 @@ $ sudo sgdisk --zap-all /dev/sdx
 ```
 
 This will clean/wipe the disks to ensure the ceph is cleared from previous installation
+
+### ODF Post-Install Checks
 
 2. Ceph tools install during Storage(persistent volume) creation in ODF
 Ceph tools are useful to check the state of the ceph nodes while installing those components
