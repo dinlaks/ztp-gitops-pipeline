@@ -18,6 +18,13 @@ This repo contains YAML manifests and instructions for various ZTP related demos
 6. Deploy OpenShift GitOps (ArgoCD) using Operator
 7. Deploy TALM Operator
 
+8. Deploy argocd patch before kicking off ArgoCD Deployments for Siteconfig and Policygentemplates
+```
+oc patch argocd openshift-gitops -n openshift-gitops --type=merge --patch-file argocd-openshift-gitops-patch.json
+oc apply -k deployment/
+```
+
+
 
 ### ODF Pre-Install Checks
 
@@ -92,3 +99,12 @@ ssh to the target cluster node
 ```
 journalctl -f
 ```
+
+#### 3. Post to ztp hub configuration deployed
+
+```
+oc get AgentServiceConfig agent
+oc get po -n openshift-machine-api
+oc get AgentServiceConfig agent -o yaml
+```
+
