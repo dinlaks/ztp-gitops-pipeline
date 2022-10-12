@@ -35,8 +35,6 @@ spec:
       policyName: "subscriptions-policy"
     - fileName: ClusterLogSubscription.yaml
       policyName: "subscriptions-policy"
-    - fileName: ClusterLogOperatorStatus.yaml
-      policyName: "subscriptions-policy"
     - fileName: StorageNS.yaml
       policyName: "subscriptions-policy"
     - fileName: StorageOperGroup.yaml
