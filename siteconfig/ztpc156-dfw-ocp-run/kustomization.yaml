@@ -5,5 +5,5 @@ generators:
 - siteconfig.yaml
 
 resources:
-- pull-secret.yaml
+#- pull-secret.yaml
 - bmc-secret.yaml
