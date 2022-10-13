@@ -2,7 +2,7 @@ generators:
 - common-ranGen.yaml
 - group-du-sno-ranGen.yaml
 #- group-5gcore-ranGen.yaml
-#- site-ztpc156-ranGen.yaml
+- site-ztpc156-ranGen.yaml
 
 resources:
 - ns.yaml
