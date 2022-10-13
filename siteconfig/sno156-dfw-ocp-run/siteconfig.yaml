@@ -2,8 +2,8 @@
 apiVersion: ran.openshift.io/v1
 kind: SiteConfig
 metadata:
-  name: "ztpc156-dfw-ocp-run"
-  namespace: "ztpc156-dfw-ocp-run"
+  name: "sno156"
+  namespace: "sno156"
 spec:
   baseDomain: "dfw.ocp.run"
   pullSecretRef:
@@ -11,7 +11,7 @@ spec:
   clusterImageSetNameRef: "img4.11.7-x86-64-appsub"
   sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJn0yUIqXBCIglm0UUA+qLF+Dlr5U9pneFLOFdt+f9XJ dlakshma@redhat.com"
   clusters:
-  - clusterName: "ztpc156"
+  - clusterName: "sno156"
     networkType: "OVNKubernetes"
     clusterLabels:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples
@@ -24,7 +24,7 @@ spec:
       5gcore-profile: true
       # ../policygentemplates/example-sno-site.yaml will apply to all clusters with 'sites: "example-sno"'
       # Normally this should match or contain the cluster name so it only applies to a single cluster
-      sites : "ztpc156"
+      sites : "sno156"
     clusterNetwork:
       - cidr: "10.100.0.0/16"
         hostPrefix: 23
@@ -35,7 +35,7 @@ spec:
     #additionalNTPSources:
     #  - "192.168.2.1"
     nodes:
-      - hostName: "ztpc156"
+      - hostName: "sno156"
         role: "master"
         bmcAddress: "idrac-virtualmedia+https://192.168.110.111/redfish/v1/Systems/System.Embedded.1"
         bmcCredentialsName:
