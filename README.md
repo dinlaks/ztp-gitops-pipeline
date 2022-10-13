@@ -76,6 +76,7 @@ oc get pv
 ```
 
 
+
 ### Troubleshooting
 
 #### 1. If bmh stuck in De-provisioning while cleaning cluster
@@ -108,3 +109,10 @@ oc get po -n openshift-machine-api
 oc get AgentServiceConfig agent -o yaml
 ```
 
+#### 4. Some useful commands to check if cluster install stuck 
+
+```
+oc describe infraenvs.agent-install.openshift.io ztpc156 -n ztpc156
+oc describe agentclusterinstalls.extensions.hive.openshift.io ztpc156 -n ztpc156
+oc get nmstateconfigs.agent-install.openshift.io ztpc156 -n ztpc156 -o yaml
+```
