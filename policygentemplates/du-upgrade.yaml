@@ -1,0 +1,33 @@
+apiVersion: ran.openshift.io/v1
+kind: PolicyGenTemplate
+metadata:
+  name: "du-upgrade"
+  namespace: "ztp-group"
+spec:
+  bindingRules:
+    group-du-sno: ""
+  mcp: "master"
+  remediationAction: inform
+  sourceFiles:
+    - fileName: ClusterVersion.yaml 
+      policyName: "platform-upgrade-prep"
+      metadata:
+        name: version
+        annotations:
+          ran.openshift.io/ztp-deploy-wave: "1"
+      spec:
+        channel: "stable-4.11"
+        upstream: https://api.openshift.com/api/upgrades_info/v1/graph
+    - fileName: ClusterVersion.yaml 
+      policyName: "platform-upgrade"
+      metadata:
+        name: version
+      spec:
+        channel: "stable-4.11"
+        upstream: https://api.openshift.com/api/upgrades_info/v1/graph
+        desiredUpdate:
+          version: 4.11.7
+      status:
+        history:
+          - version: 4.11.7
+            state: "Completed"
