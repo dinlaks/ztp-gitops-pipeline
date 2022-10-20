@@ -2,8 +2,8 @@ generators:
 - common-ranGen.yaml
 - group-du-sno-ranGen.yaml
 #- group-5gcore-ranGen.yaml
-- site-sno01-ranGen.yaml
-- du-upgrade.yaml
+#- site-sno01-ranGen.yaml
+#- du-upgrade.yaml
 
 resources:
 - ns.yaml
