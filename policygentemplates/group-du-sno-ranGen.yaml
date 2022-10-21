@@ -65,12 +65,12 @@ spec:
 #sourceFiles:
     - fileName: PtpConfigSlave.yaml   # Change to PtpConfigSlaveCvl.yaml for ColumbiaVille NIC
       policyName: "config-policy"
-#      metadata:
-#        name: "du-ptp-slave"
-#      spec:
-#        profile:
-#        - name: "slave"
-#          # This interface must match the hardware in this group
-#          interface: "ens5f0"
-#          ptp4lOpts: "-2 -s --summary_interval -4"
-#         phc2sysOpts: "-a -r -n 24"
+      metadata:
+        name: "du-ptp-slave"
+      spec:
+        profile:
+        - name: "slave"
+          # This interface must match the hardware in this group
+          interface: "ens5f0"
+          ptp4lOpts: "-2 -s --summary_interval -4"
+          phc2sysOpts: "-a -r -n 24"
