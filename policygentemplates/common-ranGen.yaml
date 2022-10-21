@@ -20,7 +20,7 @@ spec:
     - fileName: PtpSubscription.yaml
       policyName: "subscriptions-policy"
     - fileName: PtpSubscriptionNS.yaml
-     policyName: "subscriptions-policy"
+      policyName: "subscriptions-policy"
     - fileName: PtpSubscriptionOperGroup.yaml
       policyName: "subscriptions-policy"
 #    - fileName: PaoSubscription.yaml
