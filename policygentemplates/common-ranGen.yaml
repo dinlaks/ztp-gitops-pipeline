@@ -17,18 +17,18 @@ spec:
 #      policyName: "subscriptions-policy"
 #    - fileName: SriovSubscriptionOperGroup.yaml
 #      policyName: "subscriptions-policy"
-#    - fileName: PtpSubscription.yaml
+    - fileName: PtpSubscription.yaml
+      policyName: "subscriptions-policy"
+    - fileName: PtpSubscriptionNS.yaml
+     policyName: "subscriptions-policy"
+    - fileName: PtpSubscriptionOperGroup.yaml
+      policyName: "subscriptions-policy"
+#    - fileName: PaoSubscription.yaml
 #      policyName: "subscriptions-policy"
-#    - fileName: PtpSubscriptionNS.yaml
-#     policyName: "subscriptions-policy"
-#    - fileName: PtpSubscriptionOperGroup.yaml
+#    - fileName: PaoSubscriptionNS.yaml
 #      policyName: "subscriptions-policy"
-    - fileName: PaoSubscription.yaml
-      policyName: "subscriptions-policy"
-    - fileName: PaoSubscriptionNS.yaml
-      policyName: "subscriptions-policy"
-    - fileName: PaoSubscriptionOperGroup.yaml
-      policyName: "subscriptions-policy"
+#    - fileName: PaoSubscriptionOperGroup.yaml
+#      policyName: "subscriptions-policy"
 #    - fileName: ClusterLogNS.yaml
 #     policyName: "subscriptions-policy"
 #    - fileName: ClusterLogOperGroup.yaml
