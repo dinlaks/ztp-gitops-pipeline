@@ -1,6 +1,6 @@
 ### TALM Upgrade and Rollback with Backup
 
-1. Push the du-upgrade.yaml under policygentemplates folder to git to trigger the ZTP pipeline
+1. Push the du-upgrade.yaml under policygentemplates folder to git and trigger the ZTP pipeline
 
 2. check the created policies by running the following command:
 
