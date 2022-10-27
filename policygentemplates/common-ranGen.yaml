@@ -26,13 +26,13 @@ spec:
 #    - fileName: PaoSubscription.yaml
 #      policyName: "subscriptions-policy"
 #    - fileName: PaoSubscriptionNS.yaml
-#      policyName: "subscriptions-policy"
+#     policyName: "subscriptions-policy"
 #    - fileName: PaoSubscriptionOperGroup.yaml
 #      policyName: "subscriptions-policy"
 #    - fileName: ClusterLogNS.yaml
-#     policyName: "subscriptions-policy"
+#      policyName: "subscriptions-policy"
 #    - fileName: ClusterLogOperGroup.yaml
-#     policyName: "subscriptions-policy"
+#      policyName: "subscriptions-policy"
 #    - fileName: ClusterLogSubscription.yaml
 #      policyName: "subscriptions-policy"
 #    - fileName: StorageNS.yaml
