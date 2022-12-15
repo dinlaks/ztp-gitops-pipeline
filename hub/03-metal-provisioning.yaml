@@ -5,6 +5,8 @@ metadata:
   - provisioning.metal3.io
   name: provisioning-configuration
 spec:
+  provisioningMacAddresses:
+  - aa:aa:aa:aa:aa:aa
   preProvisioningOSDownloadURLs: {}
   provisioningNetwork: Disabled
   watchAllNamespaces: true
