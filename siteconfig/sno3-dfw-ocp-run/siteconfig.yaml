@@ -2,16 +2,16 @@
 apiVersion: ran.openshift.io/v1
 kind: SiteConfig
 metadata:
-  name: "sno01"
-  namespace: "sno01"
+  name: "sno3"
+  namespace: "sno3"
 spec:
-  baseDomain: "dfw.ocp.run"
+  baseDomain: "dinesh156.dfw.ocp.run"
   pullSecretRef:
     name: "pull-secret"
-  clusterImageSetNameRef: "img4.11.1-x86-64-appsub"
+  clusterImageSetNameRef: "openshift-v4.11.22"
   sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJn0yUIqXBCIglm0UUA+qLF+Dlr5U9pneFLOFdt+f9XJ dlakshma@redhat.com"
   clusters:
-  - clusterName: "sno01"
+  - clusterName: "sno3"
     networkType: "OVNKubernetes"
     clusterLabels:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples
@@ -24,7 +24,7 @@ spec:
       5gcore-profile: true
       # ../policygentemplates/example-sno-site.yaml will apply to all clusters with 'sites: "example-sno"'
       # Normally this should match or contain the cluster name so it only applies to a single cluster
-      sites : "sno01"
+      sites : "sno3"
     clusterNetwork:
       - cidr: "10.100.0.0/16"
         hostPrefix: 23
@@ -35,7 +35,7 @@ spec:
     #additionalNTPSources:
     #  - "192.168.2.1"
     nodes:
-      - hostName: "sno01"
+      - hostName: "sno3"
         role: "master"
         bmcAddress: "idrac-virtualmedia+https://192.168.110.111/redfish/v1/Systems/System.Embedded.1"
         bmcCredentialsName:
@@ -84,7 +84,7 @@ spec:
             dns-resolver:
               config:
                 search:
-                - dfw.ocp.run
+                - dinesh156.dfw.ocp.run
                 server:
                 - 192.168.156.10
             routes:

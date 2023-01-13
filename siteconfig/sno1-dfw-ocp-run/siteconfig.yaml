@@ -2,8 +2,8 @@
 apiVersion: ran.openshift.io/v1
 kind: SiteConfig
 metadata:
-  name: "sno2"
-  namespace: "sno2"
+  name: "sno1"
+  namespace: "sno1"
 spec:
   baseDomain: "dinesh156.dfw.ocp.run"
   pullSecretRef:
@@ -11,7 +11,7 @@ spec:
   clusterImageSetNameRef: "openshift-v4.11.22"
   sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJn0yUIqXBCIglm0UUA+qLF+Dlr5U9pneFLOFdt+f9XJ dlakshma@redhat.com"
   clusters:
-  - clusterName: "sno2"
+  - clusterName: "sno1"
     networkType: "OVNKubernetes"
     clusterLabels:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples
@@ -24,7 +24,7 @@ spec:
       5gcore-profile: true
       # ../policygentemplates/example-sno-site.yaml will apply to all clusters with 'sites: "example-sno"'
       # Normally this should match or contain the cluster name so it only applies to a single cluster
-      sites : "sno2"
+      sites : "sno1"
     clusterNetwork:
       - cidr: "10.100.0.0/16"
         hostPrefix: 23
@@ -35,12 +35,12 @@ spec:
     #additionalNTPSources:
     #  - "192.168.2.1"
     nodes:
-      - hostName: "sno2"
+      - hostName: "sno1"
         role: "master"
-        bmcAddress: "idrac-virtualmedia+https://192.168.110.103/redfish/v1/Systems/System.Embedded.1"
+        bmcAddress: "idrac-virtualmedia+https://192.168.110.102/redfish/v1/Systems/System.Embedded.1"
         bmcCredentialsName:
           name: "bmc-secret"
-        bootMACAddress: "b8:ca:3a:68:c4:60"
+        bootMACAddress: "24:6e:96:c2:95:60"
         bootMode: "UEFI"
         rootDeviceHints:
           # /dev/sdb
@@ -49,7 +49,7 @@ spec:
         nodeNetwork:
           interfaces:
             - name: "eno1"
-              macAddress: "b8:ca:3a:68:c4:60"
+              macAddress: "24:6e:96:c2:95:60"
 #            - name: "ens5f0"
 #              macAddress: "0c:42:a1:aa:95:b2"
 #            - name: "ens5f1"
@@ -59,11 +59,11 @@ spec:
               - name: eno1
                 type: ethernet
                 state: up
-                macAddress: "b8:ca:3a:68:c4:60"
+                macAddress: "24:6e:96:c2:95:60"
                 ipv4:
                   enabled: true
                   address:
-                  - ip: 192.168.156.103
+                  - ip: 192.168.156.102
                     prefix-length: 24
                 ipv6:
                   enabled: false
