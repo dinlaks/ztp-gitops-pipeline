@@ -47,21 +47,22 @@ spec:
 #            fsType: ext4
 #            devicePaths:
 #              - /dev/sdd
-#    - fileName: PerformanceProfile.yaml
-#      policyName: "config-policy"
-#      metadata:
-#        name: openshift-node-performance-profile
-#      spec:
-#        additionalKernelArgs:
-#          - pci=realloc
-#        cpu:
-#          isolated: "2-19,22-39"
-#          reserved: "0-1,20-21"
-#        hugepages:
-#          defaultHugepagesSize: 1G
-#          pages:
-#            - size: 1G
-#              count: 32
+    - fileName: PerformanceProfile.yaml
+      policyName: "config-policy"
+      metadata:
+        name: openshift-node-performance-profile
+      spec:
+        additionalKernelArgs:
+          - pci=realloc
+        cpu:
+          isolated: "2-19,22-32"
+          reserved: "0-1,20-21"
+        hugepages:
+          defaultHugepagesSize: 1G
+          pages:
+            - size: 1G
+              count: 32
+        globallyDisableIrqLoadBalancing: false
 #sourceFiles:
     - fileName: PtpConfigSlave.yaml   # Change to PtpConfigSlaveCvl.yaml for ColumbiaVille NIC
       policyName: "config-policy"

@@ -1,0 +1,77 @@
+---
+apiVersion: ran.openshift.io/v1
+kind: PolicyGenTemplate
+metadata:
+  name: "sno3"
+  namespace: "ztp-site"
+spec:
+  bindingRules:
+    sites: "sno3"
+  mcp: "master"
+  sourceFiles:
+    - fileName: SriovNetworkNodePolicy.yaml
+      policyName: "config-policy"
+      metadata:
+        name: "sriov-nnp-du-fh"
+      spec:
+        deviceType: netdevice
+        isRdma: false
+        nicSelector:
+          pfNames: ["ens5f0#0-0"]
+        numVfs: 8
+        resourceName: du-fh
+    - fileName: SriovNetworkNodePolicy.yaml
+      policyName: "config-policy"
+      metadata:
+        name: "sriov-nnp-du-mh"
+      spec:
+        deviceType: vfio-pci
+        isRdma: false
+        nicSelector:
+          pfNames: ["ens5f0#1-4"]
+        numVfs: 8
+        resourceName: du-mh
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-0-netdevice"
+#      spec:
+#        deviceType: netdevice
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f0#5-8"]
+#        numVfs: 9
+#        resourceName: mt27710_0_netdevice
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-1-openshift"
+#      spec:
+#        deviceType: netdevice
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f1#0-0"]
+#        numVfs: 9
+#        resourceName: mt27710_1_openshift
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-1-vfio-pci"
+#      spec:
+#        deviceType: vfio-pci
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f1#1-4"]
+#        numVfs: 9
+#        resourceName: mt27710_1_vfio_pci
+#    - fileName: SriovNetworkNodePolicy.yaml
+#      policyName: "config-policy"
+#      metadata:
+#        name: "policy-mt27710-1-netdevice"
+#      spec:
+#        deviceType: netdevice
+#        isRdma: false
+#        nicSelector:
+#          pfNames: ["ens5f1#5-8"]
+#        numVfs: 9
+#        resourceName: mt27710_1_netdevice

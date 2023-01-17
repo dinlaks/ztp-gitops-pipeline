@@ -17,6 +17,10 @@ spec:
       policyName: "subscriptions-policy"
     - fileName: SriovSubscriptionOperGroup.yaml
       policyName: "subscriptions-policy"
+    - fileName: SriovOperatorConfig.yaml
+      policyName: "config-policy"
+    - fileName: SriovNetwork.yaml
+      policyName: "config-policy"
     - fileName: PtpSubscription.yaml
       policyName: "subscriptions-policy"
     - fileName: PtpSubscriptionNS.yaml
