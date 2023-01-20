@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 #- sno1-dfw-ocp-run
 #- sno2-dfw-ocp-run
-#- sno3-dfw-ocp-run
+- sno3-dfw-ocp-run
