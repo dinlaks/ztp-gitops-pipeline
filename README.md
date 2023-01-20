@@ -24,7 +24,13 @@ oc patch argocd openshift-gitops -n openshift-gitops --type=merge --patch-file a
 oc apply -k deployment/
 ```
 
-
+9. HowTo add Webhooks for faster sync with git
+Under repo settings, Go to Webhook and point the argocd endpoints from the argocd app running in the cluster
+```
+oc get route -n openshift-gitops 
+```
+Append /api/webhook to the URL and create a webhook using that. 
+Disable SSL and use push events while creating webhook.
 
 ### ODF Pre-Install Checks
 
