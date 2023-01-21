@@ -35,8 +35,8 @@ spec:
     kind: ManagedCluster
   - group: 'ran.openshift.io'
     kind: SiteConfig
-  - group: 'bitnami.com'
-    kind: SealedSecret
+#  - group: 'bitnami.com'
+#    kind: SealedSecret
 
   sourceRepos:
   - '*'
