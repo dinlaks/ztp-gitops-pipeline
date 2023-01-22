@@ -53,7 +53,7 @@ spec:
       policyName: "config-policy"
 #    - fileName: PerformanceProfile.yaml
 #      policyName: "config-policy"
-    - fileName: SriovNodeNetworkPolicy.yaml
+#    - fileName: SriovNodeNetworkPolicy.yaml
       policyName: "config-policy"
     - fileName: SriovNodeNetworkPolicy.yaml
       policyName: "config-policy"
