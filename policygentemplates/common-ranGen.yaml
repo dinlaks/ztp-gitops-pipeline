@@ -55,8 +55,8 @@ spec:
 #      policyName: "config-policy"
 #    - fileName: SriovNodeNetworkPolicy.yaml
       policyName: "config-policy"
-    - fileName: SriovNodeNetworkPolicy.yaml
-      policyName: "config-policy"
+#    - fileName: SriovNodeNetworkPolicy.yaml
+#      policyName: "config-policy"
 # # Below info for disconnected registry only
     # # These CRs are in support of installation from a disconnected registry
     # #
