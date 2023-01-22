@@ -54,7 +54,7 @@ spec:
 #    - fileName: PerformanceProfile.yaml
 #      policyName: "config-policy"
 #    - fileName: SriovNodeNetworkPolicy.yaml
-      policyName: "config-policy"
+#      policyName: "config-policy"
 #    - fileName: SriovNodeNetworkPolicy.yaml
 #      policyName: "config-policy"
 # # Below info for disconnected registry only
