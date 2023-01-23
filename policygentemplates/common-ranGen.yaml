@@ -23,14 +23,14 @@ spec:
 #      policyName: "config-policy"
 #    - fileName: SriovNetwork.yaml
 #      policyName: "config-policy"
-    - fileName: PtpSubscription.yaml
-      policyName: "subscriptions-policy"
-    - fileName: PtpSubscriptionNS.yaml
-      policyName: "subscriptions-policy"
-    - fileName: PtpSubscriptionOperGroup.yaml
-      policyName: "subscriptions-policy"
-    - fileName: PtpOperatorStatus.yaml
-      policyName: "subscriptions-policy"
+#    - fileName: PtpSubscription.yaml
+#      policyName: "subscriptions-policy"
+#    - fileName: PtpSubscriptionNS.yaml
+#      policyName: "subscriptions-policy"
+#    - fileName: PtpSubscriptionOperGroup.yaml
+#      policyName: "subscriptions-policy"
+#    - fileName: PtpOperatorStatus.yaml
+#      policyName: "subscriptions-policy"
 #    - fileName: PaoSubscription.yaml
 #      policyName: "subscriptions-policy"
 #    - fileName: PaoSubscriptionNS.yaml
