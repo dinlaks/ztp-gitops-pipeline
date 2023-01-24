@@ -45,7 +45,7 @@ spec:
     kind: ClusterRoleBinding
   - group: ''
     kind: Pod
-#  - group: 'bitnami.com'
-#    kind: SealedSecret
+  - group: 'bitnami.com'
+    kind: SealedSecret
   sourceRepos:
   - '*'
