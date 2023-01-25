@@ -15,7 +15,7 @@ spec:
         name: "sriov-nnp-du-fh"
       spec:
         deviceType: netdevice
-        isRdma: false
+        isRdma: true
         nicSelector:
           pfNames: ["ens5f0#0-0"]
         numVfs: 8
@@ -25,8 +25,8 @@ spec:
       metadata:
         name: "sriov-nnp-du-mh"
       spec:
-        deviceType: vfio-pci
-        isRdma: false
+        deviceType: netdevice
+        isRdma: true
         nicSelector:
           pfNames: ["ens5f0#1-4"]
         numVfs: 8
