@@ -18,7 +18,7 @@ spec:
         isRdma: true
         nicSelector:
           pfNames: ["ens5f0#0-0"]
-        numVfs: 8
+        numVfs: 40
         resourceName: du-fh
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "config-policy"
@@ -29,7 +29,7 @@ spec:
         isRdma: true
         nicSelector:
           pfNames: ["ens5f0#1-4"]
-        numVfs: 8
+        numVfs: 40
         resourceName: du-mh
 #    - fileName: SriovNetworkNodePolicy.yaml
 #      policyName: "config-policy"
