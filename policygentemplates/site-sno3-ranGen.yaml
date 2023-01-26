@@ -19,7 +19,7 @@ spec:
         nicSelector:
           pfNames: ["ens5f0#0-0"]
         numVfs: 40
-        resourceName: du-fh
+        resourceName: du_fh
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "config-policy"
       metadata:
@@ -30,7 +30,7 @@ spec:
         nicSelector:
           pfNames: ["ens5f0#1-4"]
         numVfs: 40
-        resourceName: du-mh
+        resourceName: du_mh
 #    - fileName: SriovNetworkNodePolicy.yaml
 #      policyName: "config-policy"
 #      metadata:
