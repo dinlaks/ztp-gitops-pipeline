@@ -53,8 +53,8 @@ spec:
               macAddress: "24:6e:96:59:33:e8"
             - name: "ens5f0"
               macAddress: "0c:42:a1:aa:95:b2"
-            - name: "ens5f1"
-              macAddress: "0c:42:a1:aa:95:b3"
+#            - name: "ens5f1"
+#              macAddress: "0c:42:a1:aa:95:b3"
           config:
             interfaces:
               - name: eno1
