@@ -1,3 +1,36 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovOperatorConfig
+metadata:
+  name: sriov-operator-config
+  namespace: openshift-sriov-network-operator
+spec:
+  configDaemonNodeSelector:
+    node-role.kubernetes.io/master: ""
+  disableDrain: true
+  enableInjector: true
+  enableOperatorWebhook: true
+---
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: sriov-nw-du-fh
+  namespace: openshift-sriov-network-operator
+spec:
+  networkNamespace: openshift-sriov-network-operator
+#  ipam: ""
+#  vlan: 1000
+  resourceName: du_fh
+---
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: sriov-nw-du-bh
+  namespace: openshift-sriov-network-operator
+spec:
+  networkNamespace: openshift-sriov-network-operator
+#  ipam: ""
+#  vlan: 1000
+  resourceName: du_bh
 ---
 apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
@@ -12,25 +45,42 @@ spec:
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "config-policy"
       metadata:
+        name: "sriov-nnp-vf-admin"
+      spec:
+        deviceType: netdevice
+        isRdma: true
+        nicSelector:
+          vendor: "15b3"
+          deviceID: "1015"
+          pfNames: ["ens5f0#0-0"]
+        numVfs: 16
+        resourceName: vfadmin
+    - fileName: SriovNetworkNodePolicy.yaml
+      policyName: "config-policy"
+      metadata:
         name: "sriov-nnp-du-fh"
       spec:
         deviceType: netdevice
         isRdma: true
         nicSelector:
-          pfNames: ["ens5f0#0-0"]
-        numVfs: 8
+          vendor: "15b3"
+          deviceID: "1015"
+          pfNames: ["ens5f0#1-8"]
+        numVfs: 16
         resourceName: du_fh
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "config-policy"
       metadata:
-        name: "sriov-nnp-du-mh"
+        name: "sriov-nnp-du-bh"
       spec:
         deviceType: netdevice
         isRdma: true
         nicSelector:
-          pfNames: ["ens5f0#1-4"]
-        numVfs: 8
-        resourceName: du_mh
+          vendor: "15b3"
+          deviceID: "1015"
+          pfNames: ["ens5f0#9-16"]
+        numVfs: 16
+        resourceName: du_bh
 #    - fileName: SriovNetworkNodePolicy.yaml
 #      policyName: "config-policy"
 #      metadata:
