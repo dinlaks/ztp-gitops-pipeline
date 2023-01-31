@@ -80,3 +80,37 @@ spec:
           interface: "ens5f0"
           ptp4lOpts: "-2 -s --summary_interval -4"
           phc2sysOpts: "-a -r -n 24"
+#sourceFiles for sr-iov operatorconfig
+    - fileName: SriovOperatorConfig.yaml   
+      policyName: "config-policy"
+      metadata:
+        name: sriov-operator-config
+        namespace: openshift-sriov-network-operator
+      spec:
+        configDaemonNodeSelector:
+          node-role.kubernetes.io/master: ""
+        disableDrain: true
+        enableInjector: true
+        enableOperatorWebhook: true
+#sourceFiles for sr-iov Network Fronthaul
+    - fileName: SriovNetwork.yaml   
+      policyName: "config-policy"
+      metadata:
+        name: sriov-nw-du-fh
+        namespace: openshift-sriov-network-operator
+      spec:
+        networkNamespace: openshift-sriov-network-operator
+#  ipam: ""
+#  vlan: 1000
+        resourceName: du_fh
+#sourceFiles for sr-iov Network BackHaul
+    - fileName: SriovNetwork.yaml   
+      policyName: "config-policy"
+      metadata:
+        name: sriov-nw-du-bh
+        namespace: openshift-sriov-network-operator
+      spec:
+        networkNamespace: openshift-sriov-network-operator
+#  ipam: ""
+#  vlan: 1001
+        resourceName: du_bh
