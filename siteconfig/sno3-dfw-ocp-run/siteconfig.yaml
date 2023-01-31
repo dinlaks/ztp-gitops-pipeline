@@ -13,7 +13,11 @@ spec:
   clusters:
   - clusterName: "sno3"
     networkType: "OVNKubernetes"
-    extraManifestPath: extra-manifest
+    extraManifestPath:
+      filter:
+        inclusionDefault: exclude
+        include:
+          - 03-sctp-machine-config-master.yaml
     clusterLabels:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples
       du-profile: "v4.11"
