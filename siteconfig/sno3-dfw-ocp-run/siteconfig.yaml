@@ -13,7 +13,7 @@ spec:
   clusters:
   - clusterName: "sno3"
     networkType: "OVNKubernetes"
-    extraManifestPath:
+    extraManifest:
       filter:
         inclusionDefault: exclude
         include:
