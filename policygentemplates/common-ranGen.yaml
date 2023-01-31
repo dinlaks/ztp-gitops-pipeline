@@ -51,8 +51,10 @@ spec:
 #      policyName: "subscriptions-policy"
     - fileName: ReduceMonitoringFootprint.yaml
       policyName: "config-policy"
-#    - fileName: PerformanceProfile.yaml
-#      policyName: "config-policy"
+    - fileName: PerformanceProfile.yaml
+      policyName: "config-policy"
+    - fileName: PtpConfigSlave.yaml
+      policyName: "config-policy"
 #    - fileName: SriovNodeNetworkPolicy.yaml
 #      policyName: "config-policy"
 #    - fileName: SriovNodeNetworkPolicy.yaml
