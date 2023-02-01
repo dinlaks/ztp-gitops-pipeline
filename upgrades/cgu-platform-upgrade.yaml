@@ -12,3 +12,4 @@ spec:
   - sno3
   remediationStrategy:
     maxConcurrency: 1
+  enable: false
