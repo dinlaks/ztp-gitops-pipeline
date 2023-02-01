@@ -4,7 +4,7 @@ generators:
 #- group-5gcore-ranGen.yaml
 #- site-sno1-ranGen.yaml
 - site-sno3-ranGen.yaml
-#- du-upgrade.yaml
+- du-upgrade.yaml
 
 resources:
 - ns.yaml
