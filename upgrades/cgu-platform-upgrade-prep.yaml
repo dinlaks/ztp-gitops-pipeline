@@ -7,7 +7,7 @@ spec:
   managedPolicies:
   - du-upgrade-platform-upgrade-prep
   clusters:
-  - sno1
+  - sno3
   remediationStrategy:
     maxConcurrency: 1
   enable: true

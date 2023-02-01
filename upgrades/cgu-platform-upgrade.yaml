@@ -9,6 +9,6 @@ spec:
   preCaching: false
   backup: true
   clusters:
-  - sno1
+  - sno3
   remediationStrategy:
     maxConcurrency: 1
