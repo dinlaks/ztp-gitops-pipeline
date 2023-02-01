@@ -44,7 +44,7 @@ spec:
         nicSelector:
           vendor: "15b3"
           deviceID: "1015"
-          pfNames: ["ens5f0#9-16"]
+          pfNames: ["ens5f0#9-15"]
         numVfs: 16
         resourceName: du_bh
 #    - fileName: SriovNetworkNodePolicy.yaml
