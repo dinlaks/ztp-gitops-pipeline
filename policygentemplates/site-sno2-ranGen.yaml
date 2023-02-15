@@ -2,11 +2,11 @@
 apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
 metadata:
-  name: "sno1"
+  name: "sno2"
   namespace: "ztp-site"
 spec:
   bindingRules:
-    sites: "sno1"
+    sites: "sno2"
     du-profile: "v4.11"
   mcp: "master"
   sourceFiles:

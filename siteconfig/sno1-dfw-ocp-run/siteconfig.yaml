@@ -8,7 +8,7 @@ spec:
   baseDomain: "dinesh156.dfw.ocp.run"
   pullSecretRef:
     name: "pull-secret"
-  clusterImageSetNameRef: "openshift-v4.11.22"
+  clusterImageSetNameRef: "openshift-v4.11.26"
   sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJn0yUIqXBCIglm0UUA+qLF+Dlr5U9pneFLOFdt+f9XJ dlakshma@redhat.com"
   clusters:
   - clusterName: "sno1"
@@ -17,11 +17,11 @@ spec:
       # These example cluster labels correspond to the bindingRules in the PolicyGenTemplate examples
       du-profile: "v4.11"
       # ../policygentemplates/common-ranGen.yaml will apply to all clusters with 'common: true'
-      common: true
+#      common: true
       # ../policygentemplates/group-du-sno-ranGen.yaml will apply to all clusters with 'group-du-sno: ""'
-      group-du-sno: ""
+#      group-du-sno: ""
       # ../policygentemplates/group-5gcore-ranGen.yaml will apply to all clusters with '5g-core-profile: true'
-      5gcore-profile: true
+#      5gcore-profile: true
       # ../policygentemplates/example-sno-site.yaml will apply to all clusters with 'sites: "example-sno"'
       # Normally this should match or contain the cluster name so it only applies to a single cluster
       sites : "sno1"
@@ -43,9 +43,10 @@ spec:
         bootMACAddress: "24:6e:96:c2:95:60"
         bootMode: "UEFI"
         rootDeviceHints:
-          # /dev/sdb
-          hctl: '1:2:0:0'
-        cpuset: "0-1,38-39"
+          deviceName: "/dev/sda"
+#          wwn: "0x500a07511c860809"
+#          hctl: '1:2:0:0'
+        cpuset: "0-1,30-31"
         nodeNetwork:
           interfaces:
             - name: "eno1"

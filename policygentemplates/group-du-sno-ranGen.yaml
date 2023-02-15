@@ -57,8 +57,13 @@ spec:
         - "rcupdate.rcu_normal_after_boot=0"
 #        - pci=realloc
         cpu:
-          isolated: "2-19,22-39"
-          reserved: "0-1,20-21"
+          # Dell Gen9 servers
+          #isolated: "2-19,22-39"
+          #reserved: "0-1,20-21"
+          
+          # Dell Gen8 servers
+          isolated: "2-14,17-31"
+          reserved: "0-1,15-16"
         hugepages:
           defaultHugepagesSize: 1G
           pages:

@@ -26,7 +26,7 @@ spec:
       # ../policygentemplates/group-du-sno-ranGen.yaml will apply to all clusters with 'group-du-sno: ""'
       group-du-sno: ""
       # ../policygentemplates/group-5gcore-ranGen.yaml will apply to all clusters with '5g-core-profile: true'
-      5gcore-profile: true
+#      5gcore-profile: true
       # ../policygentemplates/example-sno-site.yaml will apply to all clusters with 'sites: "example-sno"'
       # Normally this should match or contain the cluster name so it only applies to a single cluster
       sites : "sno3"

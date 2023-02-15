@@ -9,4 +9,5 @@ resources:
   - clusters-app.yaml
   - policies-app.yaml
   - openshift-v4.11.22.yaml
+  - openshift-v4.11.26.yaml
 #  - openshift-v4.11.23.yaml
